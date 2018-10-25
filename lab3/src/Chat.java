@@ -1,4 +1,5 @@
 import client.Node;
+import sun.misc.Signal;
 
 import java.io.IOException;
 import java.net.InetAddress;
@@ -15,7 +16,7 @@ public class Chat {
         String name = args[0];
         int lose = Integer.valueOf(args[1]);
         int port = Integer.valueOf(args[2]);
-        Node myNode = null;
+        final Node myNode;
         try {
             if (args.length == 3) {
                 myNode = new Node(name, lose, port);

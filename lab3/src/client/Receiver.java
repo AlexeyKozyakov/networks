@@ -4,6 +4,7 @@ import msg.Message;
 
 import java.io.IOException;
 import java.net.DatagramSocket;
+import java.net.SocketException;
 import java.util.Random;
 
 
@@ -27,12 +28,15 @@ public class Receiver extends Thread{
             }
             try {
                 Message msg = Message.receive(socket);
-                if (random.nextInt(101) + 1 >= lose) {
+                if (random.nextInt(100) >= lose) {
                     msg.handle(owner);
                 }
-            } catch (IOException e) {
+            } catch (SocketException e) {
+                if (isInterrupted()) {
+                    break;
+                }
+            } catch (IOException e)  {
                 e.printStackTrace();
-                System.err.println(e.toString());
             }
         }
     }

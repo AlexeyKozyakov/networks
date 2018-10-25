@@ -2,6 +2,7 @@ package client;
 
 import msg.JoinMessage;
 import msg.Message;
+import msg.MsgType;
 import msg.TextMessage;
 
 import java.io.IOException;
@@ -24,14 +25,15 @@ public class Sender{
     }
 
     public void resendTextMessage(TextMessage msg) throws IOException {
-
-        for (InetSocketAddress addr : neighbours.keySet()) {
-            if (!addr.equals(msg.getAddr())) {
-                msg.send(socket, addr);
+        if (!neighbours.isEmpty()) {
+            for (InetSocketAddress addr : neighbours.keySet()) {
+                if (!addr.equals(msg.getAddr())) {
+                    msg.send(socket, addr);
+                }
             }
+            msg.markAsSent();
+            latestMessages.put(msg.getMsgUUID(), msg);
         }
-        msg.markAsSent();
-        latestMessages.put(msg.getMsgUUID(), msg);
 
     }
 
@@ -44,12 +46,20 @@ public class Sender{
     }
 
     public void sendMessageToNeignbours(Message msg) throws IOException {
-        for (InetSocketAddress addr : neighbours.keySet()) {
-            sendMessage(msg, addr);
+        if (!neighbours.isEmpty()) {
+            for (InetSocketAddress addr : neighbours.keySet()) {
+                sendMessage(msg, addr);
+            }
+            msg.markAsSent();
+            if (msg instanceof JoinMessage) {
+                latestMessages.put(((JoinMessage) msg).getJoinUUID(), msg);
+            }
+            if (msg instanceof TextMessage) {
+                latestMessages.put(((TextMessage) msg).getMsgUUID(), msg);
+            }
         }
-        msg.markAsSent();
-        if (msg instanceof JoinMessage) {
-            latestMessages.put(((JoinMessage) msg).getJoinUUID(), msg);
+        if (msg.getType() == MsgType.LEAVE) {
+            socket.close();
         }
     }
 

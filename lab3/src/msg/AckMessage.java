@@ -13,6 +13,11 @@ public class AckMessage extends Message {
         this.ackUUID = ackUUID;
     }
 
+    public AckMessage(UUID ackUUID) {
+        super(MsgType.ACK);
+        this.ackUUID = ackUUID;
+    }
+
     @Override
     public DatagramPacket pack(InetAddress ip, int port) {
         byte [] buf = new byte[BUF_SIZE];

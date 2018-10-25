@@ -176,5 +176,9 @@ public abstract class Message {
     public Map<InetSocketAddress, Boolean> getAcks() {
         return acks;
     }
+
+    public MsgType getType() {
+        return type;
+    }
 }
 

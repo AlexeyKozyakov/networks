@@ -12,7 +12,9 @@ public class Node {
     public static final long CHECK_TIME = 500;
     public static final long CACHE_SIZE = 10000;
     public static final String END_MESSAGE = "::send";
+    public static final String QUIT_MESSAGE = "::close";
 
+    private Scanner scanner = new Scanner(System.in);
     private DatagramSocket socket;
     private Map<InetSocketAddress, Long> neighbours = new ConcurrentHashMap<>();
     private Sender sender;
@@ -62,21 +64,23 @@ public class Node {
         updating.interrupt();
         receiver.interrupt();
         messenger.interrupt();
-        socket.close();
-
     }
 
     private Thread messenger = new Thread(() -> {
         StringBuilder builder = new StringBuilder();
-        Scanner scanner = new Scanner(System.in);
         builder.setLength(0);
         while (true) {
-            if (Thread.interrupted()) {
-                break;
-            }
             String str = scanner.nextLine();
+            if (QUIT_MESSAGE.equals(str)) {
+                try {
+                    stop();
+                    return;
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
             if (!END_MESSAGE.equals(str)) {
-                builder.append(str + "\n");
+                builder.append(str).append("\n");
             } else {
                 TextMessage msg = new TextMessage(UUID.randomUUID(), name, builder.toString());
                 try {
@@ -104,15 +108,23 @@ public class Node {
             try {
                 sender.sendMessageToNeignbours(ping);
             } catch (IOException e) {
-                System.err.println(e.toString());
+                if (Thread.interrupted()) {
+                    break;
+                } else {
+                    System.err.println(e.toString());
+                }
             }
             for (Message msg : latestMessages.values()) {
                 if (!msg.isAcked() && msg.isSent()) {
                     try {
                         sender.resendToNotAcked(msg);
                     } catch (IOException e) {
-                        e.printStackTrace();
-                        System.err.println(e.toString());
+                        if (Thread.interrupted()) {
+                            return;
+                        } else {
+                            e.printStackTrace();
+                            System.err.println(e.toString());
+                        }
                     }
                 }
             }
@@ -124,6 +136,7 @@ public class Node {
     public void handleLeaveMessage(LeaveMessage msg) {
         if (neighbours.containsKey(msg.getAddr())) {
             neighbours.keySet().remove(msg.getAddr());
+            System.out.println(msg.getAddr() + " left");
         }
     }
 
@@ -136,10 +149,11 @@ public class Node {
     public void handleJoinMessage(JoinMessage msg) {
         if (!neighbours.containsKey(msg.getAddr())) {
             neighbours.put(msg.getAddr(), System.currentTimeMillis());
+            System.out.println(msg.getAddr() + " joinded");
         }
-        AckMessage ack = new AckMessage(msg.getJoinUUID(), msg.getIp(), msg.getPort());
+        AckMessage ack = new AckMessage(msg.getJoinUUID());
         try {
-            sender.sendMessage(ack, ack.getAddr());
+            sender.sendMessage(ack, msg.getAddr());
         } catch (IOException e) {
             e.printStackTrace();
             System.err.println(e.toString());

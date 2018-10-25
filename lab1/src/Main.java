@@ -1,4 +1,3 @@
-import sun.misc.Signal;
 
 import java.io.IOException;
 import java.net.InetAddress;
@@ -22,14 +21,6 @@ public class Main {
             }
             Host host = new Host(groupAddress);
             host.start();
-
-            Signal.handle(new Signal("INT"), signal -> {
-                try {
-                    host.stop();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            });
 
         } catch (UnknownHostException e) {
             System.out.println("Invalid address");
