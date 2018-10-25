@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7efac156-10f4-489c-a872-ad163cf59764" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../lab2/out/production/lab2/upload/OI-hipster-gui-20171031.iso" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab2/out/production/lab2/upload/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lab3/Chat.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lab3/client/Node$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lab3/client/Node$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lab3/client/Node.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lab3/client/Receiver.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lab3/client/Sender.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lab3/exceptions/DatagramFormatException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lab3/exceptions/DatagramSizeException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lab3/exceptions/PackingException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lab3/msg/AckMessage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lab3/msg/JoinMessage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lab3/msg/LeaveMessage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lab3/msg/Message$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lab3/msg/Message$MsgLen.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lab3/msg/Message.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lab3/msg/MsgType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lab3/msg/PingMessage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lab3/msg/TextMessage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Chat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/client/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/client/Receiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/client/Sender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/DatagramFormatException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/DatagramSizeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/PackingException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/msg/AckMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/msg/JoinMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/msg/LeaveMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/msg/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/msg/MsgType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/msg/PingMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/msg/TextMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/out/production/lab2/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/out/production/lab2/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/out/production/lab2/Server$ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/out/production/lab2/Server$ClientHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/out/production/lab2/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/out/production/lab2/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/src/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/src/Server.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/lab3$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1540461975224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-796611779">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="2" />
+          <entry key="java" value="91" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="2" />
+          <entry key="JAVA" value="91" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="23" />
+          <entry key="java" value="10861" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="10861" />
+          <entry key="PLAIN_TEXT" value="23" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="lab3" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/exceptions/DatagramSizeException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/exceptions/PackingException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/msg/AckMessage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#718#719#0" expanded="true" />
+                <element signature="e#748#749#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/msg/JoinMessage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/msg/LeaveMessage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/client/Receiver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="359">
+              <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/Node.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="111" selection-start-line="111" selection-end-line="111" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#5781#5782#0" expanded="true" />
+                <element signature="e#5810#5811#0" expanded="true" />
+                <element signature="e#5869#5870#0" expanded="true" />
+                <element signature="e#5902#5903#0" expanded="true" />
+                <element signature="e#5930#5931#0" expanded="true" />
+                <element signature="e#5957#5958#0" expanded="true" />
+                <element signature="e#6010#6011#0" expanded="true" />
+                <element signature="e#6047#6048#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/msg/MsgType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/msg/Message.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="403">
+              <caret line="161" column="8" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#5085#5086#0" expanded="true" />
+                <element signature="e#5136#5137#0" expanded="true" />
+                <element signature="e#5159#5160#0" expanded="true" />
+                <element signature="e#5186#5187#0" expanded="true" />
+                <element signature="e#5426#5427#0" expanded="true" />
+                <element signature="e#5453#5454#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/Sender.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>getData().length</find>
+      <find>Message</find>
+      <find>0</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Type.java" />
+        <option value="$PROJECT_DIR$/src/MsgType.java" />
+        <option value="$PROJECT_DIR$/src/Message.java" />
+        <option value="$PROJECT_DIR$/src/msg/ConnectMessage.java" />
+        <option value="$PROJECT_DIR$/src/msg/MsgType.java" />
+        <option value="$PROJECT_DIR$/src/exceptions/DatagramSizeException.java" />
+        <option value="$PROJECT_DIR$/src/exceptions/DatagramFormatException.java" />
+        <option value="$PROJECT_DIR$/src/main/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/Receiver.java" />
+        <option value="$PROJECT_DIR$/src/client/Client.java" />
+        <option value="$PROJECT_DIR$/src/client/node.java" />
+        <option value="$PROJECT_DIR$/src/exceptions/PackingException.java" />
+        <option value="$PROJECT_DIR$/src/msg/AckMessage.java" />
+        <option value="$PROJECT_DIR$/src/msg/JoinMessage.java" />
+        <option value="$PROJECT_DIR$/src/msg/PingMessage.java" />
+        <option value="$PROJECT_DIR$/src/msg/LeaveMessage.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/msg/TextMessage.java" />
+        <option value="$PROJECT_DIR$/src/Chat.java" />
+        <option value="$PROJECT_DIR$/src/msg/Message.java" />
+        <option value="$PROJECT_DIR$/src/client/Node.java" />
+        <option value="$PROJECT_DIR$/src/client/Sender.java" />
+        <option value="$PROJECT_DIR$/src/client/Receiver.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="423" />
+    <option name="width" value="952" />
+    <option name="height" value="1076" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="lab3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="msg" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540468834996" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab1" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chat" />
+      <module name="lab3" />
+      <option name="PROGRAM_PARAMETERS" value="Semen 50 25566" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7efac156-10f4-489c-a872-ad163cf59764" name="Default Changelist" comment="" />
+      <created>1540383519156</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1540383519156</updated>
+      <workItem from="1540383528333" duration="36191000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="36191000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="61" y="25" width="1859" height="1055" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" sideWeight="0.50569105" side_tool="true" weight="0.2498618" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49430895" visible="true" weight="0.16473189" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" weight="0.3293348" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" sideWeight="0.4997236" weight="0.3293348" />
+      <window_info anchor="bottom" id="Terminal" sideWeight="0.4991708" weight="0.20719738" />
+      <window_info anchor="bottom" id="Event Log" sideWeight="0.5002764" side_tool="true" weight="0.3293348" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4997236" weight="0.3293348" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.17011996" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.24972737" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/client/Node.java</url>
+          <line>162</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/client/Node.java</url>
+          <line>111</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/client/Receiver.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Chat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/lang/Thread.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="215" selection-start-line="215" selection-end-line="215" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/net/DatagramSocket.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="320" selection-start-line="320" selection-end-line="320" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/msg/PingMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/msg/TextMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exceptions/DatagramFormatException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exceptions/DatagramSizeException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exceptions/PackingException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/msg/JoinMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/msg/LeaveMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/msg/MsgType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/msg/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="161" column="8" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5085#5086#0" expanded="true" />
+            <element signature="e#5136#5137#0" expanded="true" />
+            <element signature="e#5159#5160#0" expanded="true" />
+            <element signature="e#5186#5187#0" expanded="true" />
+            <element signature="e#5426#5427#0" expanded="true" />
+            <element signature="e#5453#5454#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/msg/AckMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="111" selection-start-line="111" selection-end-line="111" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5781#5782#0" expanded="true" />
+            <element signature="e#5810#5811#0" expanded="true" />
+            <element signature="e#5869#5870#0" expanded="true" />
+            <element signature="e#5902#5903#0" expanded="true" />
+            <element signature="e#5930#5931#0" expanded="true" />
+            <element signature="e#5957#5958#0" expanded="true" />
+            <element signature="e#6010#6011#0" expanded="true" />
+            <element signature="e#6047#6048#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/Sender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/Receiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>lab3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

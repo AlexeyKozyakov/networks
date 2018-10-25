@@ -48,7 +48,7 @@ public class Server {
 
         private Socket clientSocket;
 
-        public ClientHandler(Socket socket) throws IOException {
+        public ClientHandler(Socket socket) {
             clientSocket = socket;
         }
 
@@ -86,8 +86,20 @@ public class Server {
                 size = socketInput.readLong();
                 startSpeedCount();
                 System.out.println("NAME: " + name + "\nSIZE: " + size / (1024.0 * 1024) + " MB");
-                String outPath = "upload" + name.substring(name.lastIndexOf('/'));
+                String outPath;
+                if (name.contains("/")) {
+                    outPath = "upload" + name.substring(name.lastIndexOf('/'));
+                } else {
+                    outPath = "upload/" + name;
+                }
                 File newFile = new File(outPath);
+                if (newFile.exists()) {
+                    System.err.println("File already exists");
+                    socketOutput.writeUTF("FILE_FAILED");
+                    throw new IOException();
+                } else {
+                    socketOutput.writeUTF("FILE_OK");
+                }
                 File newDir = newFile.getParentFile();
                 if (!newDir.exists()) {
                     newDir.mkdirs();
@@ -97,6 +109,10 @@ public class Server {
                 int len;
                 while (received != size && running) {
                     len = socketInput.read(buf);
+                    if (len == -1) {
+                        running = false;
+                        break;
+                    }
                     received += len;
                     fileOutput.write(buf, 0, len);
                 }
@@ -108,12 +124,13 @@ public class Server {
                 clientSocket.close();
             } catch (IOException e) {
                 speed.interrupt();
+                running = false;
                 System.err.println("Something went wrong, closing connection");
                 try {
                     clientSocket.close();
                 } catch (IOException e1) {
                     System.err.println("Error while closing client socket");
-                    e1.printStackTrace();
+                    System.err.println(e1);
                 }
             }
         }

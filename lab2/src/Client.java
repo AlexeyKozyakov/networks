@@ -1,4 +1,5 @@
 import java.io.*;
+import java.net.InetAddress;
 import java.net.Socket;
 
 public class Client {
@@ -9,16 +10,15 @@ public class Client {
 
     public void start(String filename, String ip, int port) {
         try {
-            socket = new Socket(ip, port);
+            socket = new Socket(InetAddress.getByName(ip), port);
         } catch (IOException e) {
             System.err.println("Error while creating socket");
-            e.printStackTrace();
+            return;
         }
         try {
             uploadFile(filename);
         } catch (IOException e) {
             System.err.println("Error while uploading file");
-            e.printStackTrace();
         }
     }
 
@@ -30,6 +30,12 @@ public class Client {
         InputStream fileInput = new FileInputStream(file);
         socketOutput.writeUTF(fileName);
         socketOutput.writeLong(file.length());
+        if (!"FILE_OK".equals(socketInput.readUTF())) {
+            System.err.println("File already exists");
+            socketInput.close();
+            socketOutput.close();
+            socket.close();
+        }
         int len;
         while ((len = fileInput.read(buf)) != -1) {
             socketOutput.write(buf, 0, len);
@@ -43,9 +49,10 @@ public class Client {
         socket.close();
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         if (args.length != 3) {
-            System.err.println("Error in args");
+            System.err.println("Error in args\n" +
+                    "Usage: java Client filename IP port");
             return;
         }
         Client client = new Client();
