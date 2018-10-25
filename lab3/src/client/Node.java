@@ -69,7 +69,9 @@ public class Node {
     private Thread messenger = new Thread(() -> {
         StringBuilder builder = new StringBuilder();
         builder.setLength(0);
+        System.out.println("\nEnter message:");
         while (true) {
+            System.out.print("\t");
             String str = scanner.nextLine();
             if (QUIT_MESSAGE.equals(str)) {
                 try {
@@ -89,6 +91,7 @@ public class Node {
                     e.printStackTrace();
                     System.err.println(e.toString());
                 }
+                System.out.print("\nEnter message:\n");
             }
         }
     });
@@ -180,8 +183,8 @@ public class Node {
     }
 
     private void showMessage(TextMessage msg) {
-        System.out.println("\nMessage from: " + msg.getSenderName() +
-                "\n" + msg.getText());
+        System.out.println("\nMessage from " + msg.getSenderName() + ":" +
+                "\n\t" + String.join("\n\t", msg.getText().split("\n")));
     }
 
     public DatagramSocket getSocket() {

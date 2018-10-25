@@ -1,5 +1,4 @@
 import client.Node;
-import sun.misc.Signal;
 
 import java.io.IOException;
 import java.net.BindException;
@@ -10,7 +9,7 @@ import java.net.UnknownHostException;
 public class Chat {
 
     private static void printUsage() {
-        System.err.println("Usage: java Chat name lose_percent port [parent_ip parent_port]");
+        System.err.println("Usage: (NAME PERCENT PORT [PARENT_IP PARENT_PORT])");
     }
 
     public static void main(String[] args) {
@@ -31,9 +30,8 @@ public class Chat {
                 int parentPort = Integer.valueOf(args[4]);
                 myNode = new Node(name, lose, port, parentIp, parentPort);
             }
-            myNode.start();
             System.out.println("Commands:\n"+ Node.END_MESSAGE +" - send message\n" + Node.QUIT_MESSAGE +" - exit");
-            System.out.println("Enter messages:");
+            myNode.start();
         } catch (BindException e) {
             System.err.println("This port is already used!");
             printUsage();
