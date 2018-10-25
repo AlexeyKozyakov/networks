@@ -185,6 +185,7 @@ public class Node {
     private void showMessage(TextMessage msg) {
         System.out.println("\nMessage from " + msg.getSenderName() + ":" +
                 "\n\t" + String.join("\n\t", msg.getText().split("\n")));
+        System.out.print("\nEnter message:\n\t");
     }
 
     public DatagramSocket getSocket() {
