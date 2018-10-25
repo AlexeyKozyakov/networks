@@ -3,20 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7efac156-10f4-489c-a872-ad163cf59764" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/Chat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/Chat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/client/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/client/Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/client/Receiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/client/Receiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/client/Sender.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/client/Sender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/msg/AckMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/msg/AckMessage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/msg/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/msg/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/Receiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Receiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/Sender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Sender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/msg/AckMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/msg/AckMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/msg/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/msg/Message.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,12 +38,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="23" />
-          <entry key="java" value="11829" />
+          <entry key="java" value="12028" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="11829" />
+          <entry key="JAVA" value="12028" />
           <entry key="PLAIN_TEXT" value="23" />
         </counts>
       </usages-collector>
@@ -124,8 +111,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="89" column="53" selection-start-line="89" selection-start-column="53" selection-end-line="89" selection-end-column="53" />
+            <state relative-caret-position="483">
+              <caret line="131" column="74" selection-start-line="131" selection-start-column="74" selection-end-line="131" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#6337#6338#0" expanded="true" />
@@ -302,7 +289,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540474106192" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540474716082" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab1" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -326,7 +313,7 @@
     <configuration name="Unnamed" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Chat" />
       <module name="lab3" />
-      <option name="PROGRAM_PARAMETERS" value="Semen 0 25566" />
+      <option name="PROGRAM_PARAMETERS" value="Semen 90 25566" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -342,12 +329,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540383519156</updated>
-      <workItem from="1540383528333" duration="41568000" />
+      <workItem from="1540383528333" duration="42194000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41568000" />
+    <option name="totallyTimeSpent" value="42194000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="61" y="25" width="1859" height="1055" extended-state="6" />
@@ -358,7 +345,7 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" sideWeight="0.50569105" side_tool="true" weight="0.2498618" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49430895" visible="true" weight="0.16473189" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49430895" visible="true" weight="0.16473189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" weight="0.3293348" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
@@ -367,8 +354,8 @@
       <window_info anchor="bottom" id="Event Log" sideWeight="0.5002764" side_tool="true" weight="0.3293348" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4997236" weight="0.3293348" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.17011996" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.10359869" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17011996" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2868048" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -545,8 +532,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="89" column="53" selection-start-line="89" selection-start-column="53" selection-end-line="89" selection-end-column="53" />
+        <state relative-caret-position="483">
+          <caret line="131" column="74" selection-start-line="131" selection-start-column="74" selection-end-line="131" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#6337#6338#0" expanded="true" />
