@@ -38,7 +38,7 @@ public class Sender{
     }
 
     public void resendToNotAcked(Message msg) throws IOException {
-        msg.getAcks().keySet().removeIf(key -> !neighbours.containsKey(key));
+        msg.updateAcks(neighbours.keySet());
         for (Map.Entry<InetSocketAddress, Boolean> entry : msg.getAcks().entrySet()) {
             if (!entry.getValue()) {
                 sendMessage(msg, entry.getKey());

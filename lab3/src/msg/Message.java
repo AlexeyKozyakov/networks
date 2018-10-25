@@ -12,6 +12,7 @@ import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -30,7 +31,6 @@ public abstract class Message {
 
     private Map<InetSocketAddress, Boolean> acks = new ConcurrentHashMap<>();
 
-    private int acked = 0;
     private boolean sent = false;
 
     public abstract DatagramPacket pack(InetAddress ip, int port) throws PackingException;
@@ -155,7 +155,12 @@ public abstract class Message {
     }
 
     public boolean isAcked() {
-        return acked >= acks.size();
+        for (Boolean asked : acks.values()) {
+            if (!asked) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public boolean isSent() {
@@ -165,8 +170,11 @@ public abstract class Message {
     public void ack(InetSocketAddress addr) {
         if (acks.containsKey(addr) && !acks.get(addr)) {
             acks.put(addr, true);
-            ++acked;
         }
+    }
+
+    public void updateAcks(Set<InetSocketAddress> neighbours) {
+        acks.keySet().removeIf(addr -> !neighbours.contains(addr));
     }
 
     public void markAsSent() {
