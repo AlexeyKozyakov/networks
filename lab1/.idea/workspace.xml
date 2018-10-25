@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c0ef9f76-6c48-45ce-a824-ee4a130d4cb1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../lab3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/client/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/client/Node.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,7 +50,7 @@
     <session id="-403584003">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.45" value="1" />
@@ -86,7 +87,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Host.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-500">
+            <state relative-caret-position="160">
               <caret line="8" column="47" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -219,18 +220,18 @@
       <workItem from="1536875478791" duration="743000" />
       <workItem from="1538061262365" duration="61000" />
       <workItem from="1538603350031" duration="249000" />
-      <workItem from="1540394631718" duration="7043000" />
+      <workItem from="1540394631718" duration="7047000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31673000" />
+    <option name="totallyTimeSpent" value="31677000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="61" y="25" width="1859" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27307904" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18242122" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -357,7 +358,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Host.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-500">
+        <state relative-caret-position="160">
           <caret line="8" column="47" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />

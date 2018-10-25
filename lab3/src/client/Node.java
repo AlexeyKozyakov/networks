@@ -12,7 +12,7 @@ public class Node {
     public static final long CHECK_TIME = 500;
     public static final long CACHE_SIZE = 10000;
     public static final String END_MESSAGE = "::send";
-    public static final String QUIT_MESSAGE = "::close";
+    public static final String QUIT_MESSAGE = "::exit";
 
     private Scanner scanner = new Scanner(System.in);
     private DatagramSocket socket;
@@ -136,7 +136,6 @@ public class Node {
     public void handleLeaveMessage(LeaveMessage msg) {
         if (neighbours.containsKey(msg.getAddr())) {
             neighbours.keySet().remove(msg.getAddr());
-            System.out.println(msg.getAddr() + " left");
         }
     }
 
@@ -149,7 +148,6 @@ public class Node {
     public void handleJoinMessage(JoinMessage msg) {
         if (!neighbours.containsKey(msg.getAddr())) {
             neighbours.put(msg.getAddr(), System.currentTimeMillis());
-            System.out.println(msg.getAddr() + " joinded");
         }
         AckMessage ack = new AckMessage(msg.getJoinUUID());
         try {

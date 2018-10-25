@@ -155,7 +155,7 @@ public abstract class Message {
     }
 
     public boolean isAcked() {
-        return acked == acks.size();
+        return acked >= acks.size();
     }
 
     public boolean isSent() {
