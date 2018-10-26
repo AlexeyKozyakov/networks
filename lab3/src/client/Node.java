@@ -68,7 +68,6 @@ public class Node {
 
     private Thread messenger = new Thread(() -> {
         StringBuilder builder = new StringBuilder();
-        builder.setLength(0);
         System.out.println("\nEnter message:");
         while (true) {
             System.out.print("\t");
@@ -85,6 +84,7 @@ public class Node {
                 builder.append(str).append("\n");
             } else {
                 TextMessage msg = new TextMessage(UUID.randomUUID(), name, builder.toString());
+                builder.setLength(0);
                 try {
                     sender.sendMessageToNeignbours(msg);
                 } catch (IOException e) {
