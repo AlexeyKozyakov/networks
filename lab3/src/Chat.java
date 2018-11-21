@@ -42,11 +42,11 @@ public class Chat {
             System.err.println("Wrong port!");
             printUsage();
         } catch (SocketException e) {
-            e.printStackTrace();
             System.err.println("Error while creating socket");
-        } catch (IOException e) {
             e.printStackTrace();
+        } catch (IOException e) {
             System.err.println("Error, cannot join to chat");
+            e.printStackTrace();
         }
     }
 }
