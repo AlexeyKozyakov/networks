@@ -8,9 +8,9 @@ public class Connection {
     private SocketChannel leftSocket, rightSocket;
     private ByteBuffer leftBuffer, rightBuffer;
 
-    public Connection(SocketChannel leftSocker, SocketChannel rightSocker, ByteBuffer leftBuffer, ByteBuffer rightBuffer) {
-        this.leftSocket = leftSocker;
-        this.rightSocket = rightSocker;
+    public Connection(SocketChannel leftSocket, SocketChannel rightSocket, ByteBuffer leftBuffer, ByteBuffer rightBuffer) {
+        this.leftSocket = leftSocket;
+        this.rightSocket = rightSocket;
         this.leftBuffer = leftBuffer;
         this.rightBuffer = rightBuffer;
     }
@@ -21,14 +21,6 @@ public class Connection {
 
     public SocketChannel getRightSocket() {
         return rightSocket;
-    }
-
-    public ByteBuffer getLeftBuffer() {
-        return leftBuffer;
-    }
-
-    public ByteBuffer getRightBuffer() {
-        return rightBuffer;
     }
 
     public long readLeft() throws IOException {

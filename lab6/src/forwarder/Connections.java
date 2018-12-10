@@ -1,5 +1,6 @@
 package forwarder;
 
+import java.io.IOException;
 import java.nio.channels.SocketChannel;
 import java.util.HashMap;
 import java.util.Map;
@@ -30,4 +31,12 @@ public class Connections {
         rightConnections.remove(connection);
     }
 
+    public void closeAll() throws IOException {
+        for (Connection connection : leftConnections.values()) {
+            connection.getLeftSocket().close();
+            connection.getRightSocket().close();
+        }
+        leftConnections.clear();
+        rightConnections.clear();
+    }
 }

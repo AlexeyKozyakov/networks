@@ -18,6 +18,13 @@ public class Main {
                 InetAddress rightHost = InetAddress.getByName(args[1]);
                 int rightPort = Integer.valueOf(args[2]);
                 Forwarder forwarder = new Forwarder(leftPort, rightHost, rightPort);
+                Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+                    try {
+                        forwarder.stop();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }));
                 forwarder.start();
             } catch (NumberFormatException e) {
                 System.err.println("Bad port value");

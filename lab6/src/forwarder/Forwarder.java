@@ -4,10 +4,7 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
-import java.nio.channels.SelectionKey;
-import java.nio.channels.Selector;
-import java.nio.channels.ServerSocketChannel;
-import java.nio.channels.SocketChannel;
+import java.nio.channels.*;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -19,6 +16,7 @@ public class Forwarder {
     private Selector selector;
     private int leftPort, rightPort;
     private Connections connections = new Connections();
+    private boolean running = true;
 
     public Forwarder(int leftPort, InetAddress rightHost, int rightPort){
         this.leftPort = leftPort;
@@ -32,31 +30,43 @@ public class Forwarder {
         serverSocket.bind(new InetSocketAddress(leftPort));
         serverSocket.configureBlocking(false);
         serverSocket.register(selector, SelectionKey.OP_ACCEPT);
+        System.out.println("Forwarder started");
         listening();
     }
 
+    public void stop() throws IOException {
+        running = false;
+        selector.close();
+        connections.closeAll();
+        System.out.println("Forwarder finalized");
+    }
+
     private void listening() throws IOException {
-        while (true) {
+        while (running) {
             if (selector.select() > 0) {
-                Set<SelectionKey> selected = selector.selectedKeys();
-                for (Iterator<SelectionKey> iterator = selected.iterator(); iterator.hasNext(); ) {
-                    SelectionKey key = iterator.next();
-                    iterator.remove();
-                    if (key.isValid() && key.isAcceptable()) {
-                        acceptSocket(key);
+                try {
+                    Set<SelectionKey> selected = selector.selectedKeys();
+                    for (Iterator<SelectionKey> iterator = selected.iterator(); iterator.hasNext(); ) {
+                        SelectionKey key = iterator.next();
+                        iterator.remove();
+                        if (key.isValid() && key.isAcceptable()) {
+                            acceptSocket();
+                        }
+                        if (key.isValid() && key.isReadable()) {
+                            readSocket(key);
+                        }
+                        if (key.isValid() && key.isWritable()) {
+                            writeSocket(key);
+                        }
                     }
-                    if (key.isValid() && key.isReadable()) {
-                        readSocket(key);
-                    }
-                    if (key.isValid() && key.isWritable()) {
-                        writeSocket(key);
-                    }
+                } catch (ClosedSelectorException e) {
+                    //selector closed, running == false
                 }
             }
         }
     }
 
-    private void acceptSocket(SelectionKey key) throws IOException{
+    private void acceptSocket() throws IOException{
         SocketChannel leftSocket = serverSocket.accept();
         leftSocket.configureBlocking(false);
         leftSocket.register(selector, SelectionKey.OP_READ | SelectionKey.OP_WRITE);
