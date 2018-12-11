@@ -2,17 +2,23 @@ package forwarder;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
+import java.nio.channels.SelectionKey;
+import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
 
 public class Connection {
     private SocketChannel leftSocket, rightSocket;
     private ByteBuffer leftBuffer, rightBuffer;
+    private Selector selector;
+    private boolean leftClosed = false, rightClosed = false;
 
-    public Connection(SocketChannel leftSocket, SocketChannel rightSocket, ByteBuffer leftBuffer, ByteBuffer rightBuffer) {
+    public Connection(SocketChannel leftSocket, SocketChannel rightSocket,
+                      ByteBuffer leftBuffer, ByteBuffer rightBuffer, Selector selector) {
         this.leftSocket = leftSocket;
         this.rightSocket = rightSocket;
         this.leftBuffer = leftBuffer;
         this.rightBuffer = rightBuffer;
+        this.selector = selector;
     }
 
     public SocketChannel getLeftSocket() {
@@ -23,37 +29,48 @@ public class Connection {
         return rightSocket;
     }
 
-    public long readLeft() throws IOException {
-        return readFrom(leftSocket, leftBuffer);
+    public void readLeft() throws IOException {
+        readFrom(leftSocket, rightSocket, leftBuffer, true);
     }
 
-    public long readRight() throws IOException {
-        return readFrom(rightSocket, rightBuffer);
+    public void readRight() throws IOException {
+        readFrom(rightSocket, leftSocket, rightBuffer, false);
     }
 
-    private long readFrom(SocketChannel socket, ByteBuffer bb) throws IOException {
-        if (bb.position() < bb.limit()) {
-            return socket.read(bb);
+    private void readFrom(SocketChannel socket, SocketChannel another, ByteBuffer bb, boolean left) throws IOException {
+        int received = socket.read(bb);
+        if (received <= 0) {
+            if (left) {
+                leftClosed = true;
+            } else {
+                rightClosed = true;
+            }
+            removeOp(socket, SelectionKey.OP_READ);
         }
-        return 0;
-    }
-
-    public long writeToRight() throws IOException {
-        return writeTo(rightSocket, leftBuffer);
-    }
-
-    public long writeToLeft() throws IOException {
-        return writeTo(leftSocket, rightBuffer);
-    }
-
-    private long writeTo(SocketChannel socket, ByteBuffer bb) throws IOException {
-        if (bb.position() > 0) {
-            bb.flip();
-            int sent = socket.write(bb);
-            bb.compact();
-            return sent;
+        if (received > 0 && another.isConnected())
+            addOp(another, SelectionKey.OP_WRITE);
+        if (bb.position() >= bb.limit()) {
+            removeOp(socket, SelectionKey.OP_READ);
         }
-        return 0;
+    }
+
+    public void writeToRight() throws IOException {
+        writeTo(rightSocket, leftSocket, leftBuffer);
+    }
+
+    public void writeToLeft() throws IOException {
+        writeTo(leftSocket, rightSocket, rightBuffer);
+    }
+
+    private void writeTo(SocketChannel socket, SocketChannel another, ByteBuffer bb) throws IOException {
+        bb.flip();
+        if (socket.write(bb) > 0 && another.isConnected()) {
+            addOp(another, SelectionKey.OP_READ);
+        }
+        bb.compact();
+        if (bb.position() <= 0) {
+            removeOp(socket, SelectionKey.OP_WRITE);
+        }
     }
 
     public void close() throws IOException {
@@ -61,16 +78,16 @@ public class Connection {
         rightSocket.close();
     }
 
-    public boolean checkLeftBuf() {
-        return checkBuf(leftBuffer);
+    private void addOp(SocketChannel socket, int op) {
+        socket.keyFor(selector).interestOps(socket.keyFor(selector).interestOps() | op);
     }
 
-    public boolean checkRightBuf() {
-        return checkBuf(rightBuffer);
+    private void removeOp(SocketChannel socket, int op) {
+        socket.keyFor(selector).interestOps(socket.keyFor(selector).interestOps() & ~op);
     }
 
-    private boolean checkBuf(ByteBuffer bb) {
-        return bb.limit() != bb.position();
-
+    public boolean finalized() {
+        return leftClosed && rightClosed && leftBuffer.position() == 0 && rightBuffer.position() == 0;
     }
+
 }

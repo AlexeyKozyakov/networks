@@ -26,17 +26,24 @@ public class Connections {
         return leftConnections.containsKey(socket);
     }
 
-    public void remove(Connection connection) {
-        leftConnections.remove(connection);
-        rightConnections.remove(connection);
+    public void closeFinalized() throws IOException {
+        for (Connection connection : leftConnections.values()) {
+            if (connection.finalized()) {
+                connection.close();
+            }
+        }
+        leftConnections.values().removeIf(Connection::finalized);
+        rightConnections.values().removeIf(Connection::finalized);
     }
 
     public void closeAll() throws IOException {
         for (Connection connection : leftConnections.values()) {
-            connection.getLeftSocket().close();
-            connection.getRightSocket().close();
+            if (connection.finalized()) {
+                connection.close();
+            }
         }
         leftConnections.clear();
         rightConnections.clear();
     }
+
 }

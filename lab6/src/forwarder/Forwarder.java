@@ -52,6 +52,9 @@ public class Forwarder {
                         if (key.isValid() && key.isAcceptable()) {
                             acceptSocket();
                         }
+                        if (key.isValid() && key.isConnectable()) {
+                            connectSocket(key);
+                        }
                         if (key.isValid() && key.isReadable()) {
                             readSocket(key);
                         }
@@ -63,6 +66,7 @@ public class Forwarder {
                     //selector closed, running == false
                 }
             }
+            connections.closeFinalized();
         }
     }
 
@@ -70,16 +74,27 @@ public class Forwarder {
         SocketChannel leftSocket = serverSocket.accept();
         leftSocket.configureBlocking(false);
         leftSocket.register(selector, SelectionKey.OP_READ | SelectionKey.OP_WRITE);
-        SocketChannel rightSocket = SocketChannel.open();
         try {
-            rightSocket.connect(new InetSocketAddress(rightHost, rightPort));
+            SocketChannel rightSocket = SocketChannel.open();
             rightSocket.configureBlocking(false);
-            rightSocket.register(selector, SelectionKey.OP_READ | SelectionKey.OP_WRITE);
+            rightSocket.register(selector, SelectionKey.OP_CONNECT);
+            rightSocket.connect(new InetSocketAddress(rightHost, rightPort));
             connections.addConnection(new Connection(leftSocket, rightSocket,
-                    ByteBuffer.allocate(BUF_SIZE), ByteBuffer.allocate(BUF_SIZE)));
+                    ByteBuffer.allocate(BUF_SIZE), ByteBuffer.allocate(BUF_SIZE), selector));
+        } catch (IOException e) {
+            leftSocket.close();
+        }
+    }
+
+    private void connectSocket(SelectionKey key) throws IOException {
+        SocketChannel socket = (SocketChannel) key.channel();
+        try {
+            if (socket.finishConnect()) {
+                socket.keyFor(selector).interestOps(SelectionKey.OP_READ | SelectionKey.OP_WRITE);
+            }
         } catch (IOException e) {
             System.err.println(e);
-            leftSocket.close();
+            connections.getByRightSocket(socket).close();
         }
     }
 
@@ -89,9 +104,7 @@ public class Forwarder {
         if (connections.isLeft(socket)) {
             connection = connections.getByLeftSocket(socket);
             try {
-                if (connection.checkLeftBuf() && connection.readLeft() <= 0) {
-                    closeConnection(connection);
-                }
+                connection.readLeft();
             } catch (IOException e) {
                 System.err.println(e);
                 connection.getRightSocket().close();
@@ -99,9 +112,7 @@ public class Forwarder {
         } else {
             connection = connections.getByRightSocket(socket);
             try {
-                if (connection.checkRightBuf() && connection.readRight() <= 0) {
-                    closeConnection(connection);
-                }
+                connection.readRight();
             } catch (IOException e) {
                 System.err.println(e);
                 connection.getLeftSocket().close();
@@ -129,11 +140,6 @@ public class Forwarder {
                 connection.getLeftSocket().close();
             }
         }
-    }
-
-    private void closeConnection(Connection connection) throws IOException {
-        connection.close();
-        connections.remove(connection);
     }
 
 }
