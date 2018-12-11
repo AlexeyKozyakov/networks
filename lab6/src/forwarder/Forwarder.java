@@ -73,7 +73,7 @@ public class Forwarder {
     private void acceptSocket() throws IOException{
         SocketChannel leftSocket = serverSocket.accept();
         leftSocket.configureBlocking(false);
-        leftSocket.register(selector, SelectionKey.OP_READ | SelectionKey.OP_WRITE);
+        leftSocket.register(selector, SelectionKey.OP_READ);
         try {
             SocketChannel rightSocket = SocketChannel.open();
             rightSocket.configureBlocking(false);
@@ -90,7 +90,7 @@ public class Forwarder {
         SocketChannel socket = (SocketChannel) key.channel();
         try {
             if (socket.finishConnect()) {
-                socket.keyFor(selector).interestOps(SelectionKey.OP_READ | SelectionKey.OP_WRITE);
+                socket.keyFor(selector).interestOps(SelectionKey.OP_WRITE | SelectionKey.OP_READ);
             }
         } catch (IOException e) {
             System.err.println(e);
