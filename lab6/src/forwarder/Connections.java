@@ -6,8 +6,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Connections {
-    private Map<SocketChannel, Connection> leftConnections = new HashMap<>();
-    private Map<SocketChannel, Connection> rightConnections = new HashMap<>();
+    private final Map<SocketChannel, Connection> leftConnections = new HashMap<>();
+    private final Map<SocketChannel, Connection> rightConnections = new HashMap<>();
 
     public void addConnection(Connection connection) {
         leftConnections.put(connection.getLeftSocket(), connection);

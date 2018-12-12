@@ -12,10 +12,11 @@ public class Forwarder {
 
     private final int BUF_SIZE = 1024;
     private ServerSocketChannel serverSocket;
-    private InetAddress rightHost;
+    private final InetAddress rightHost;
     private Selector selector;
-    private int leftPort, rightPort;
-    private Connections connections = new Connections();
+    private final int leftPort;
+    private final int rightPort;
+    private final Connections connections = new Connections();
     private boolean running = true;
 
     public Forwarder(int leftPort, InetAddress rightHost, int rightPort){
@@ -93,7 +94,6 @@ public class Forwarder {
                 socket.keyFor(selector).interestOps(SelectionKey.OP_WRITE | SelectionKey.OP_READ);
             }
         } catch (IOException e) {
-            System.err.println(e);
             connections.getByRightSocket(socket).close();
         }
     }
@@ -106,7 +106,6 @@ public class Forwarder {
             try {
                 connection.readLeft();
             } catch (IOException e) {
-                System.err.println(e);
                 connection.getRightSocket().close();
             }
         } else {
@@ -114,7 +113,6 @@ public class Forwarder {
             try {
                 connection.readRight();
             } catch (IOException e) {
-                System.err.println(e);
                 connection.getLeftSocket().close();
             }
         }
@@ -128,7 +126,6 @@ public class Forwarder {
             try {
                 connection.writeToLeft();
             } catch (IOException e) {
-                System.err.println(e);
                 connection.getRightSocket().close();
             }
         } else {
@@ -136,7 +133,6 @@ public class Forwarder {
             try {
                 connection.writeToRight();
             } catch (IOException e) {
-                System.err.println(e);
                 connection.getLeftSocket().close();
             }
         }

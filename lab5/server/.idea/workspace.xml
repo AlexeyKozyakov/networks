@@ -2,57 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25162f90-ead6-401a-9dd0-42ec87754849" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../client/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/.idea/libraries/javax_websocket_javax_websocket_api_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/websocket/MessagesEndpoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javax_websocket_javax_websocket_api_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_glassfish_tyrus_tyrus_container_grizzly_server_1_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_glassfish_tyrus_tyrus_server_1_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/websocket/MessagesEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/out/production/client/client/Client$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/out/production/client/client/Client$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/out/production/client/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/out/production/client/client/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/out/production/client/client/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/out/production/client/client/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/out/production/client/client/ResponseResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/out/production/client/client/ResponseResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/out/production/client/client/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/out/production/client/client/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/out/production/client/exchange/LoginRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/out/production/client/exchange/LoginRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/out/production/client/exchange/LoginResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/out/production/client/exchange/LoginResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/out/production/client/exchange/LogoutResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/out/production/client/exchange/LogoutResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/out/production/client/exchange/MessageRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/out/production/client/exchange/MessageRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/out/production/client/exchange/MessageResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/out/production/client/exchange/MessageResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/out/production/client/exchange/MessagesResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/out/production/client/exchange/MessagesResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/out/production/client/exchange/OnlineResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/out/production/client/exchange/OnlineResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/out/production/client/exchange/UsersResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/out/production/client/exchange/UsersResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/out/production/client/gui/AppFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/out/production/client/gui/AppFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/out/production/client/gui/ChatPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/out/production/client/gui/ChatPanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/out/production/client/gui/ChatPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/out/production/client/gui/ChatPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/out/production/client/gui/LoginPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/out/production/client/gui/LoginPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/out/production/client/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/out/production/client/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/out/production/client/util/JsonParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/out/production/client/util/JsonParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/gui/ChatPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/gui/ChatPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/server/exchange/LoginRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/exchange/LoginRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/server/exchange/LoginResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/exchange/LoginResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/server/exchange/LogoutResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/exchange/LogoutResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/server/exchange/MessageRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/exchange/MessageRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/server/exchange/MessageResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/exchange/MessageResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/server/exchange/MessagesResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/exchange/MessagesResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/server/exchange/OnlineResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/exchange/OnlineResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/server/exchange/UsersResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/exchange/UsersResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/server/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/server/query/MessagesQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/query/MessagesQuery.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/server/server/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/server/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/server/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/server/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/server/server/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/server/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/server/util/JsonParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/util/JsonParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/server/util/ResponseSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/util/ResponseSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab6/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab6/src/forwarder/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab6/src/forwarder/Connection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab6/src/forwarder/Connections.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab6/src/forwarder/Connections.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab6/src/forwarder/Forwarder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab6/src/forwarder/Forwarder.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -105,13 +59,23 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="364382905">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
+            <state relative-caret-position="4180">
               <caret line="226" column="26" selection-start-line="226" selection-start-column="26" selection-end-line="226" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -128,7 +92,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/exchange/MessagesResponse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
+            <state relative-caret-position="100">
               <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -149,14 +113,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/websocket/MessagesEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+            <state relative-caret-position="540">
+              <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#674#675#0" expanded="true" />
-                <element signature="e#714#715#0" expanded="true" />
-                <element signature="e#1374#1375#0" expanded="true" />
-                <element signature="e#1391#1392#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -186,7 +146,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/ResponseSender.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
+            <state relative-caret-position="460">
               <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -302,9 +262,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -349,6 +306,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -361,7 +321,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -411,17 +371,19 @@
       <workItem from="1544357639725" duration="17439000" />
       <workItem from="1544376651300" duration="1559000" />
       <workItem from="1544378534691" duration="4832000" />
+      <workItem from="1544598262330" duration="1421000" />
+      <workItem from="1544613624427" duration="75000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83009000" />
+    <option name="totallyTimeSpent" value="84505000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="61" y="25" width="1859" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2631288" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2697623" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -450,6 +412,7 @@
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.32946378" />
+      <window_info anchor="right" x="0" y="0" width="414" height="855" id="Documentation" order="9" side_tool="true" weight="0.32946378" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,18 +420,6 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/websocket/MessagesEndpoint.java</url>
-          <line>41</line>
-          <properties />
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/msg/Message.java" />
@@ -529,12 +480,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="10" selection-start-line="10" selection-end-line="21" selection-end-column="5" />
-          <folding>
-            <element signature="e#304#305#0" expanded="true" />
-            <element signature="e#329#330#0" expanded="true" />
-            <element signature="e#363#364#0" expanded="true" />
-            <element signature="e#393#394#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -549,9 +494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -559,9 +501,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -583,17 +522,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#491#492#0" expanded="true" />
-            <element signature="e#516#517#0" expanded="true" />
-            <element signature="e#551#552#0" expanded="true" />
-            <element signature="e#582#583#0" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#645#646#0" expanded="true" />
-            <element signature="e#675#676#0" expanded="true" />
-            <element signature="e#703#704#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -624,6 +552,44 @@
     <entry file="file://$PROJECT_DIR$/.idea/libraries/org_glassfish_tyrus_tyrus_server_1_14.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/websocket/javax.websocket-api/1.1/javax.websocket-api-1.1.jar!/javax/websocket/server/ServerContainer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/websocket/CustomConfigurator.java" />
+    <entry file="file://$PROJECT_DIR$/src/server/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4180">
+          <caret line="226" column="26" selection-start-line="226" selection-start-column="26" selection-end-line="226" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exchange/MessagesResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
@@ -641,6 +607,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/ResponseSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/util/JsonParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -651,73 +627,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/ResponseSender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exchange/MessagesResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/websocket/javax.websocket-api/1.1/javax.websocket-api-1.1.jar!/javax/websocket/server/ServerContainer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="226" column="26" selection-start-line="226" selection-start-column="26" selection-end-line="226" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/websocket/CustomConfigurator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="20" />
-          <folding>
-            <element signature="e#0#460#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/websocket/MessagesEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+        <state relative-caret-position="540">
+          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#674#675#0" expanded="true" />
-            <element signature="e#714#715#0" expanded="true" />
-            <element signature="e#1374#1375#0" expanded="true" />
-            <element signature="e#1391#1392#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -779,6 +694,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

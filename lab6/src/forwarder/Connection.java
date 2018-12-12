@@ -7,9 +7,11 @@ import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
 
 public class Connection {
-    private SocketChannel leftSocket, rightSocket;
-    private ByteBuffer leftBuffer, rightBuffer;
-    private Selector selector;
+    private final SocketChannel leftSocket;
+    private final SocketChannel rightSocket;
+    private final ByteBuffer leftBuffer;
+    private final ByteBuffer rightBuffer;
+    private final Selector selector;
     private boolean leftClosed = false, rightClosed = false;
 
     public Connection(SocketChannel leftSocket, SocketChannel rightSocket,
@@ -76,6 +78,7 @@ public class Connection {
     public void close() throws IOException {
         leftSocket.close();
         rightSocket.close();
+        leftSocket.keyFor(selector).cancel();
     }
 
     private void addOp(SocketChannel socket, int op) {
