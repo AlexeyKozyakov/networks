@@ -15,8 +15,8 @@ import java.util.Map;
 public class DNSConnection extends Connection{
 
     private final DatagramChannel datagramChannel;
-    private final Map<Name, ServerConnection> resolving = new HashMap<>();
-    private final Map<Name, Integer> ports = new HashMap<>();
+    private final Map<Integer, ServerConnection> resolving = new HashMap<>();
+    private final Map<Integer, Integer> ports = new HashMap<>();
 
     public DNSConnection(Selector selector) throws IOException {
         super(null);
@@ -35,8 +35,8 @@ public class DNSConnection extends Connection{
 
         datagramChannel.write(ByteBuffer.wrap(request));
 
-        resolving.put(name, serverConnection);
-        ports.put(name, port);
+        resolving.put(message.getHeader().getID(), serverConnection);
+        ports.put(message.getHeader().getID(), port);
     }
 
     @Override
@@ -46,35 +46,18 @@ public class DNSConnection extends Connection{
         Message message = new Message(buffer.array());
         Record[] records = message.getSectionArray(Section.ANSWER);
 
+        ServerConnection server = resolving.get(message.getHeader().getID());
+        int port = ports.get(message.getHeader().getID());
+
         for (Record record : records) {
             if (record.getType() == Type.A) {
-                Name name = null;
-                ServerConnection server = null;
-                int port = 0;
-                for (Map.Entry<Name, ServerConnection> entry : resolving.entrySet()) {
-                    for (int i = 0; i < entry.getKey().labels(); ++i) {
-                        if (record.getName().toString().contains(entry.getKey().getLabelString(i))) {
-                            name = entry.getKey();
-                            server = entry.getValue();
-                            break;
-                        }
-                    }
-                    if (name != null) {
-                        break;
-                    }
-                }
-                if (name == null) {
-                    continue;
-                }
-                port = ports.get(name);
-                Debug.println(name.toString().substring(0, name.toString().length() - 1) + ":" + port + " resolved");
                 InetSocketAddress address = new InetSocketAddress(((ARecord) record).getAddress(), port);
                 server.connectToServer(address);
                 server.getKey().attach(server);
                 Debug.println("by domain name");
-
-                resolving.remove(name);
-                ports.remove(name);
+                resolving.remove(message.getHeader().getID());
+                ports.remove(message.getHeader().getID());
+                break;
             }
         }
         if (resolving.isEmpty()) {

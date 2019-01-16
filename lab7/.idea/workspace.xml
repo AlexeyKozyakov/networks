@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af136592-dbd8-48af-924f-5f01c34b1033" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Proxy/.idea/libraries/dnsjava_dnsjava_2_1_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Proxy/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/dnsjava_dnsjava_2_1_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/proxy/Connection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/proxy/Connections.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/proxy/Proxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/socks/Greeting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/socks/Request.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/socks/Response.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proxy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Proxy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proxy/out/production/Proxy/Proxy/Connections/DNSConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Proxy/out/production/Proxy/Proxy/Connections/DNSConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proxy/out/production/Proxy/Proxy/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Proxy/out/production/Proxy/Proxy/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proxy/src/Proxy/Connections/DNSConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Proxy/src/Proxy/Connections/DNSConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proxy/src/Proxy/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Proxy/src/Proxy/main/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,115 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/proxy/Proxy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-596">
-              <caret line="86" column="97" selection-start-line="86" selection-start-column="97" selection-end-line="86" selection-end-column="97" />
-              <folding>
-                <element signature="e#588#589#0" expanded="true" />
-                <element signature="e#628#629#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/socks/Greeting.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
-              <folding>
-                <element signature="e#992#993#0" expanded="true" />
-                <element signature="e#1021#1022#0" expanded="true" />
-                <element signature="e#1058#1059#0" expanded="true" />
-                <element signature="e#1093#1094#0" expanded="true" />
-                <element signature="e#1133#1134#0" expanded="true" />
-                <element signature="e#1169#1170#0" expanded="true" />
-                <element signature="e#1412#1413#0" expanded="true" />
-                <element signature="e#1441#1442#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/socks/Request.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2689#2690#0" expanded="true" />
-                <element signature="e#2719#2720#0" expanded="true" />
-                <element signature="e#2751#2752#0" expanded="true" />
-                <element signature="e#2781#2782#0" expanded="true" />
-                <element signature="e#2814#2815#0" expanded="true" />
-                <element signature="e#2845#2846#0" expanded="true" />
-                <element signature="e#2881#2882#0" expanded="true" />
-                <element signature="e#2915#2916#0" expanded="true" />
-                <element signature="e#2950#2951#0" expanded="true" />
-                <element signature="e#2981#2982#0" expanded="true" />
-                <element signature="e#3010#3011#0" expanded="true" />
-                <element signature="e#3035#3036#0" expanded="true" />
-                <element signature="e#3063#3064#0" expanded="true" />
-                <element signature="e#3090#3091#0" expanded="true" />
-                <element signature="e#3133#3134#0" expanded="true" />
-                <element signature="e#3162#3163#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/socks/Response.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
-              <folding>
-                <element signature="e#1314#1315#0" expanded="true" />
-                <element signature="e#1396#1397#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/proxy/Connection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="87" selection-start-line="87" selection-end-line="87" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/proxy/Connections.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-              <folding>
-                <element signature="e#830#831#0" expanded="true" />
-                <element signature="e#888#889#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -174,40 +59,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="lab7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab7" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lab7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab7" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lab7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab7" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lab7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab7" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="proxy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lab7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab7" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="socks" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
@@ -219,7 +71,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547661093545" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547663006645" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Proxy" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -263,6 +115,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
@@ -431,16 +284,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/proxy/Connection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/proxy/Connections.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -448,6 +291,16 @@
           <folding>
             <element signature="e#830#831#0" expanded="true" />
             <element signature="e#888#889#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/proxy/Connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

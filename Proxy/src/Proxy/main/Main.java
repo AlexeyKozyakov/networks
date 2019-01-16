@@ -11,7 +11,6 @@ public class Main {
             System.exit(0);
         }
         InetSocketAddress address = new InetSocketAddress("localhost", Integer.parseInt(args[0]));
-
         try {
             SocksProxy proxy = new SocksProxy(address);
             proxy.listen();
